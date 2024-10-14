@@ -1,9 +1,13 @@
-export default function Input() {
+export default function Input({ input, setInput }: any) {
   return (
     <>
-      <div id="input" className="flex flex-row justify-center ">
-        <button>Run code</button>
-        <input type="textarea" />
+      <div id="input">
+        <input
+          type="textarea"
+          id="inputField"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
       </div>
     </>
   );

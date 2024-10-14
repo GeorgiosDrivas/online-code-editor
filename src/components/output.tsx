@@ -1,7 +1,9 @@
-export default function Output() {
+export default function Output({ output }: any) {
   return (
     <>
-      <div id="output"></div>
+      <div id="output">
+        <p>{output}</p>
+      </div>
     </>
   );
 }
