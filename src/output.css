@@ -554,10 +554,6 @@ video {
   display: none;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .flex {
   display: flex;
 }
@@ -570,8 +566,8 @@ video {
   flex-direction: column;
 }
 
-.justify-start {
-  justify-content: flex-start;
+.justify-between {
+  justify-content: space-between;
 }
 
 .text-end {
@@ -579,9 +575,9 @@ video {
 }
 
 body {
-  background-color: #243642;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #line {
@@ -595,6 +591,11 @@ body {
   width: 50%;
 }
 
+#output {
+  border-left: 1px solid #387478;
+  color: #fff;
+}
+
 #runButton {
   background-color: #387478;
   color: #fff;
@@ -602,8 +603,16 @@ body {
 }
 
 #inputField {
+  width: 100%;
   height: 100%;
   background-color: transparent;
-  border: 1px solid #0b192c;
-  border-right: none;
+  color: #fff;
+}
+
+.main-wrap {
+  background-color: #0b192c;
+}
+
+.utils-wrap {
+  background-color: #232b36;
 }

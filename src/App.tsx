@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col">
-        <div className="text-end">
+        <div className="text-end flex justify-between utils-wrap">
           <select
             value={lng?.language}
             onChange={(e) =>
@@ -61,7 +61,7 @@ function App() {
           </button>
         </div>
         <div className="flex flex-row main-wrap">
-          <Input input={input} setInput={setInput} />
+          <Input input={input} setInput={setInput} language={lng?.language} />
           <div id="line"></div>
           <Output output={output} />
         </div>
