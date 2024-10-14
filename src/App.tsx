@@ -1,24 +1,26 @@
 import { useState } from "react";
-import "./App.css";
 import Input from "./components/input";
 import Output from "./components/output";
-import axios from "axios";
+import { API } from "./api";
+import "./App.css";
+import { languages } from "./constants";
 
-// API: https://emkc.org/api/v2/piston/
+interface Option {
+  id: number;
+  language: string;
+  version: string;
+}
 
 function App() {
-  const API = axios.create({
-    baseURL: "https://emkc.org/api/v2/piston",
-  });
-
   const [output, setOutput] = useState("");
   const [input, setInput] = useState("");
+  const [lng, setLanguage] = useState<Option | null>(languages[0]);
 
   const handleRun = async () => {
     try {
       const response = await API.post("/execute", {
-        language: "javascript",
-        version: "18.15.0",
+        language: lng?.language,
+        version: lng?.version,
         files: [
           {
             name: "code.js",
@@ -30,7 +32,7 @@ function App() {
       // console.log(response);
       setOutput(response.data.run.output);
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Fetch failed:", error);
     }
   };
 
@@ -38,6 +40,22 @@ function App() {
     <>
       <div className="flex flex-col">
         <div className="text-end">
+          <select
+            value={lng?.language}
+            onChange={(e) =>
+              setLanguage(
+                languages.find(
+                  (item: Option) => item.language === e.target.value
+                ) || languages[0]
+              )
+            }
+          >
+            {languages.map((option) => (
+              <option value={option.language} key={option.id}>
+                {option.language}
+              </option>
+            ))}
+          </select>
           <button id="runButton" onClick={() => handleRun()}>
             Run code
           </button>
