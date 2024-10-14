@@ -1,13 +1,16 @@
 import "./App.css";
+import Input from "./components/input";
+import Output from "./components/output";
 
 // API: https://emkc.org/api/v2/piston/
 
 function App() {
   return (
     <>
-      <div>
-        <div id="input"></div>
-        <div id="output"></div>
+      <div className="flex flex-row">
+        <Input />
+        <div id="line"></div>
+        <Output />
       </div>
     </>
   );

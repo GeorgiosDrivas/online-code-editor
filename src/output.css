@@ -553,3 +553,32 @@ video {
 [hidden] {
   display: none;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+body {
+  background-color: #243642;
+  margin: 0;
+  padding: 0;
+}
+
+#line {
+  border: 1px solid #fff;
+  height: 100vh;
+  width: 1px;
+}
+
+#input,
+#output {
+  width: 50%;
+}
