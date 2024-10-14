@@ -4,12 +4,7 @@ import Output from "./components/output";
 import { API } from "./api";
 import "./App.css";
 import { languages } from "./constants";
-
-interface Option {
-  id: number;
-  language: string;
-  version: string;
-}
+import { Option } from "./type";
 
 function App() {
   const [output, setOutput] = useState("");
@@ -29,7 +24,6 @@ function App() {
         ],
       });
 
-      // console.log(response);
       setOutput(response.data.run.output);
     } catch (error) {
       console.error("Fetch failed:", error);
