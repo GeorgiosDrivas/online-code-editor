@@ -7,6 +7,7 @@ export default function Input({ setInput, language }: any) {
         <Editor
           height="100%"
           defaultLanguage={language}
+          theme="vs-dark"
           onChange={(value) => setInput(value || "")}
         />
       </div>

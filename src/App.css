@@ -31,9 +31,15 @@ body {
 }
 
 .main-wrap {
-  background-color: #0b192c;
+  background-color: #1e1e1e;
 }
 
 .utils-wrap {
   background-color: #232b36;
+}
+
+#selected-language {
+  background-color: #387478;
+  color: #fff;
+  cursor: pointer;
 }

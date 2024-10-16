@@ -35,6 +35,7 @@ function App() {
       <div className="flex flex-col">
         <div className="text-end flex justify-between utils-wrap">
           <select
+            id="selected-language"
             value={lng?.language}
             onChange={(e) =>
               setLanguage(
