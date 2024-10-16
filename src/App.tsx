@@ -104,7 +104,6 @@ function App() {
           }
         >
           <Input
-            input={input}
             setInput={setInput}
             language={lng?.language}
             toggleMode={toggleMode}

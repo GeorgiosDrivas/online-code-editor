@@ -1,6 +1,7 @@
 import { Editor } from "@monaco-editor/react";
+import { InputType } from "../type";
 
-export default function Input({ setInput, language, toggleMode }: any) {
+export default function Input({ setInput, language, toggleMode }: InputType) {
   return (
     <>
       <div id="input">
