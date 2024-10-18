@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "./components/input";
 import Output from "./components/output";
-import { API } from "./api";
+import { handleRun } from "./api";
 import "./App.css";
 import { languages } from "./constants";
 import { Option } from "./type";
@@ -14,24 +14,6 @@ function App() {
   const [lng, setLanguage] = useState<Option | null>(languages[0]);
   const [toggleMode, setToggleMode] = useState(false);
 
-  const handleRun = async () => {
-    try {
-      const response = await API.post("/execute", {
-        language: lng?.language,
-        version: lng?.version,
-        files: [
-          {
-            name: "code.js",
-            content: input,
-          },
-        ],
-      });
-      setOutput(response.data.run.output);
-    } catch (error) {
-      console.error("Fetch failed:", error);
-    }
-  };
-
   return (
     <>
       <div className="flex flex-col">
@@ -39,7 +21,10 @@ function App() {
           <SelectLanguage lng={lng} setLanguage={setLanguage} />
           <div className="flex">
             <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
-            <button id="runButton" onClick={() => handleRun()}>
+            <button
+              id="runButton"
+              onClick={() => handleRun({ lng, input, setOutput })}
+            >
               Run code
             </button>
           </div>
@@ -56,7 +41,6 @@ function App() {
             language={lng?.language}
             toggleMode={toggleMode}
           />
-          <div id="line"></div>
           <Output output={output} toggleMode={toggleMode} />
         </div>
       </div>
