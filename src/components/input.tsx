@@ -4,7 +4,7 @@ import { InputType } from "../type";
 export default function Input({ setInput, language, toggleMode }: InputType) {
   return (
     <>
-      <div id="input">
+      <div id="input" className="w-1/2">
         <Editor
           height="100%"
           defaultLanguage={language}

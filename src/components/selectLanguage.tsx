@@ -5,6 +5,7 @@ export default function SelectLanguage({ lng, setLanguage }: any) {
   return (
     <select
       id="selected-language"
+      className="cursor-pointer"
       value={lng?.language}
       onChange={(e) =>
         setLanguage(
