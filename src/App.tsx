@@ -32,8 +32,8 @@ function App() {
         <div
           className={
             toggleMode
-              ? "dark flex flex-row main-wrap"
-              : "light flex flex-row main-wrap"
+              ? "dark flex flex-col main-wrap h-screen"
+              : "light flex flex-col main-wrap h-screen"
           }
         >
           <Input

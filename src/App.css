@@ -8,11 +8,6 @@ body {
   overflow: hidden;
 }
 
-#line {
-  border: 1px solid rgba(135, 135, 138, 0.568);
-  width: 1px;
-}
-
 #output.dark {
   color: #fff;
 }
@@ -42,4 +37,13 @@ body {
 #selected-language {
   background-color: #387478;
   color: #fff;
+}
+
+.output-head {
+  border-top: 1px solid rgba(135, 135, 138, 0.2);
+  border-bottom: 1px solid rgba(135, 135, 138, 0.2);
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 5px 0;
 }
