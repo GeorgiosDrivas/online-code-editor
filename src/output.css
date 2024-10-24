@@ -601,17 +601,21 @@ body {
 }
 
 #output.light {
-  color: #000;
+  color: #111111;
 }
 
 #runButton {
-  background-color: #387478;
+  background-color: transparent;
   color: #fff;
-  padding: 10px 15px;
+  border-radius: 10px;
+  padding: 0 10px;
+  border: 1px solid #818181;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .main-wrap.dark {
-  background-color: #1e1e1e;
+  background-color: #111111;
 }
 
 .main-wrap.light {
@@ -619,12 +623,25 @@ body {
 }
 
 .utils-wrap {
+  padding: 10px;
+}
+
+.utils-wrap.light {
   background-color: #232b36;
 }
 
+.utils-wrap.dark {
+  background-color: #111111;
+}
+
 #selected-language {
-  background-color: #387478;
+  background-color: transparent;
   color: #fff;
+  border-radius: 10px;
+  padding: 0 10px;
+  border: 1px solid #818181;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .output-head {

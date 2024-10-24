@@ -17,7 +17,13 @@ function App() {
   return (
     <>
       <div className="flex flex-col">
-        <div className="text-end flex justify-between utils-wrap">
+        <div
+          className={
+            toggleMode
+              ? "text-end flex justify-between utils-wrap dark"
+              : "text-end flex justify-between utils-wrap light"
+          }
+        >
           <SelectLanguage lng={lng} setLanguage={setLanguage} />
           <div className="flex">
             <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
@@ -25,7 +31,7 @@ function App() {
               id="runButton"
               onClick={() => handleRun({ lng, input, setOutput })}
             >
-              Run code
+              Run
             </button>
           </div>
         </div>

@@ -7,6 +7,9 @@ export default function Input({ setInput, language, toggleMode }: InputType) {
       <div id="input" className="h-1/2">
         <Editor
           defaultLanguage={language}
+          options={{
+            minimap: { enabled: false }, // Disable the minimap
+          }}
           theme={toggleMode ? "vs-dark" : "vs"}
           onChange={(value) => setInput(value || "")}
         />
