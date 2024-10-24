@@ -629,8 +629,15 @@ body {
   background-color: #111111;
 }
 
+#selected-language.light {
+  background-color: #232b36;
+}
+
+#selected-language.dark {
+  background-color: #111111;
+}
+
 #selected-language {
-  background-color: transparent;
   color: #fff;
   border-radius: 10px;
   padding: 0 10px;

@@ -24,7 +24,11 @@ function App() {
               : "text-end flex justify-between utils-wrap light"
           }
         >
-          <SelectLanguage lng={lng} setLanguage={setLanguage} />
+          <SelectLanguage
+            toggleMode={toggleMode}
+            lng={lng}
+            setLanguage={setLanguage}
+          />
           <div className="flex">
             <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
             <button

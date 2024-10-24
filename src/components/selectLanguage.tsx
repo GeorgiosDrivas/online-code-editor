@@ -1,11 +1,11 @@
 import { languages } from "../constants";
 import { Option } from "../type";
 
-export default function SelectLanguage({ lng, setLanguage }: any) {
+export default function SelectLanguage({ lng, setLanguage, toggleMode }: any) {
   return (
     <select
       id="selected-language"
-      className="cursor-pointer"
+      className={toggleMode ? "cursor-pointer dark" : "cursor-pointer light"}
       value={lng?.language}
       onChange={(e) =>
         setLanguage(
