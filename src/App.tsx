@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Input from "./components/input";
-import Output from "./components/output";
-import { handleRun } from "./api";
-import "./App.css";
-import { languages } from "./constants";
-import { Option } from "./type";
-import Mode from "./components/mode";
-import SelectLanguage from "./components/selectLanguage";
+import Input from "@src/components/input";
+import Output from "@src/components/output";
+import { handleRun } from "@src/api";
+import "@src/App.css";
+import { languages } from "@src/constants";
+import { Option } from "@src/type";
+import Mode from "@src/components/mode";
+import SelectLanguage from "@src/components/selectLanguage";
 
 function App() {
   const [output, setOutput] = useState("");
