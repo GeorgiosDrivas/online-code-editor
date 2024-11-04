@@ -558,6 +558,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.me-3 {
+  margin-inline-end: 0.75rem;
+}
+
 .me-5 {
   margin-inline-end: 1.25rem;
 }
@@ -568,6 +572,10 @@ video {
 
 .h-1\/2 {
   height: 50%;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-screen {
@@ -653,4 +661,10 @@ body {
   font-weight: 100;
   text-transform: uppercase;
   padding: 5px 0;
+}
+
+#clear-btn {
+  color: #fff;
+  border: 1px solid #818181;
+  padding: 5px 10px;
 }

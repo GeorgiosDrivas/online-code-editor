@@ -13,6 +13,11 @@ function App() {
   const [input, setInput] = useState("");
   const [lng, setLanguage] = useState<Option | null>(languages[0]);
   const [toggleMode, setToggleMode] = useState(false);
+  const clearCode = input.length > 0;
+
+  const handleClearCode = () => {
+    setInput("");
+  };
 
   return (
     <>
@@ -24,11 +29,18 @@ function App() {
               : "text-end flex justify-between utils-wrap light"
           }
         >
-          <SelectLanguage
-            toggleMode={toggleMode}
-            lng={lng}
-            setLanguage={setLanguage}
-          />
+          <div>
+            <SelectLanguage
+              toggleMode={toggleMode}
+              lng={lng}
+              setLanguage={setLanguage}
+            />
+            {clearCode && (
+              <button onClick={() => handleClearCode()} id="clear-btn">
+                Clear code
+              </button>
+            )}
+          </div>
           <div className="flex">
             <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
             <button
@@ -60,6 +72,7 @@ function App() {
           }
         >
           <Input
+            input={input}
             setInput={setInput}
             language={lng?.language}
             toggleMode={toggleMode}

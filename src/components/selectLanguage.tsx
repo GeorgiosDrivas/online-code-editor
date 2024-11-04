@@ -5,7 +5,11 @@ export default function SelectLanguage({ lng, setLanguage, toggleMode }: any) {
   return (
     <select
       id="selected-language"
-      className={toggleMode ? "cursor-pointer dark" : "cursor-pointer light"}
+      className={
+        toggleMode
+          ? "cursor-pointer h-full me-3 dark"
+          : "cursor-pointer h-full me-3 light"
+      }
       value={lng?.language}
       onChange={(e) =>
         setLanguage(

@@ -7,6 +7,7 @@ export interface Option {
 }
 
 export interface InputType {
+  input: string;
   setInput: Dispatch<SetStateAction<string>>;
   language: string | undefined;
   toggleMode: boolean;

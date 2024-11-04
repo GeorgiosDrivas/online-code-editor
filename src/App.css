@@ -66,3 +66,9 @@ body {
   text-transform: uppercase;
   padding: 5px 0;
 }
+
+#clear-btn {
+  color: #fff;
+  border: 1px solid #818181;
+  padding: 5px 10px;
+}
