@@ -647,7 +647,7 @@ body {
 
 #selected-language {
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0 10px;
   border: 1px solid #818181;
   text-transform: uppercase;
@@ -664,6 +664,7 @@ body {
 }
 
 #clear-btn {
+  border-radius: 5px;
   color: #fff;
   border: 1px solid #818181;
   padding: 5px 10px;
