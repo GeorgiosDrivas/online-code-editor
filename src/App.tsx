@@ -42,9 +42,9 @@ function App() {
             )}
           </div>
           <div className="flex">
-            <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
             <button
               id="runButton"
+              className="me-5"
               onClick={() => handleRun({ lng, input, setOutput })}
             >
               <svg
@@ -62,6 +62,7 @@ function App() {
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
               </svg>
             </button>
+            <Mode toggleMode={toggleMode} setToggleMode={setToggleMode} />
           </div>
         </div>
         <div

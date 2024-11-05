@@ -16,7 +16,6 @@ export default function Mode({
           height="40px"
           viewBox="0 0 24 24"
           fill="#387478"
-          className="me-5"
         >
           <g id="Light">
             <g>
@@ -38,7 +37,7 @@ export default function Mode({
           width="30px"
           height="30px"
           viewBox="0 0 48 48"
-          className="me-5 mb-2"
+          className="mb-2"
           fill="#387478"
         >
           <defs></defs>
