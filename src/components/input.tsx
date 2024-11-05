@@ -1,5 +1,5 @@
 import { Editor } from "@monaco-editor/react";
-import { InputType } from "@src/type";
+import { InputType } from "../type";
 
 export default function Input({
   input,

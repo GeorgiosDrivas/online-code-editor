@@ -1,4 +1,4 @@
-import { outputType } from "@src/type";
+import { outputType } from "../type";
 
 export default function Output({ output, toggleMode }: outputType) {
   return (

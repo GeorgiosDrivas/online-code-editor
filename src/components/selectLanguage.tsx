@@ -1,5 +1,5 @@
-import { languages } from "@src/constants";
-import { Option } from "@src/type";
+import { languages } from "../constants";
+import { Option } from "../type";
 
 export default function SelectLanguage({ lng, setLanguage, toggleMode }: any) {
   return (
