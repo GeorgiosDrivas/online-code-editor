@@ -17,3 +17,9 @@ export interface outputType {
   output: string;
   toggleMode: boolean;
 }
+
+export interface PropsData {
+  lng: any;
+  input: string;
+  setOutput: Dispatch<React.SetStateAction<string>>;
+}

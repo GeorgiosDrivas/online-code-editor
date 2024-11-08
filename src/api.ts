@@ -1,11 +1,5 @@
 import axios from "axios";
-import { Dispatch } from "react";
-
-interface PropsData {
-  lng: any;
-  input: string;
-  setOutput: Dispatch<React.SetStateAction<string>>;
-}
+import { PropsData } from "./type";
 
 const API = axios.create({
   baseURL: "https://emkc.org/api/v2/piston",

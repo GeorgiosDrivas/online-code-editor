@@ -8,7 +8,7 @@ import { Option } from "./type";
 import Mode from "./components/mode";
 import SelectLanguage from "./components/selectLanguage";
 
-function App() {
+export default function App() {
   const [output, setOutput] = useState("");
   const [input, setInput] = useState("");
   const [lng, setLanguage] = useState<Option | null>(languages[0]);
@@ -84,5 +84,3 @@ function App() {
     </>
   );
 }
-
-export default App;
