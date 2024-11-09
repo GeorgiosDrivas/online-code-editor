@@ -13,7 +13,7 @@ export default function Input({
         <Editor
           defaultLanguage={language}
           options={{
-            minimap: { enabled: false }, // Disable the minimap
+            minimap: { enabled: false },
           }}
           value={input}
           theme={toggleMode ? "vs-dark" : "vs"}

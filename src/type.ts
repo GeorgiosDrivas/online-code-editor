@@ -19,7 +19,7 @@ export interface outputType {
 }
 
 export interface PropsData {
-  lng: any;
+  lng: Option | null;
   input: string;
   setOutput: Dispatch<React.SetStateAction<string>>;
 }

@@ -1,7 +1,15 @@
 import { languages } from "../constants";
 import { Option } from "../type";
 
-export default function SelectLanguage({ lng, setLanguage, toggleMode }: any) {
+export default function SelectLanguage({
+  lng,
+  setLanguage,
+  toggleMode,
+}: {
+  lng: Option | null;
+  setLanguage: React.Dispatch<React.SetStateAction<Option | null>>;
+  toggleMode: boolean;
+}) {
   return (
     <select
       id="selected-language"
